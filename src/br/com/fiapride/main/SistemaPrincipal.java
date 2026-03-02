@@ -1,26 +1,5 @@
 package br.com.fiapride.main;
 
-// Importamos a classe Passageiro para que o sistema a reconheça
-//import br.com.fiapride.model.ArCondicionado;
-//
-//public class SistemaPrincipal {
-//
-//    public static void main(String[] args) {
-//    	// Dentro do main...// Fabriquei a primeira (Instância 1)
-//    	ArCondicionado ArCondicionadoCasa = new ArCondicionado();
-//    	ArCondicionadoCasa.cor = "Azul";
-//    	ArCondicionadoCasa.potenciaBTU = 120;
-//    	ArCondicionadoCasa.marca = "Eletrolux";
-//    	// Fabriquei a segunda (Instância 2)
-//    	ArCondicionado ArCondicionadoTrabalho = new ArCondicionado();
-//    	ArCondicionadoTrabalho.cor = "Branco";
-//    	ArCondicionadoTrabalho.ligado = true;
-//    	ArCondicionadoTrabalho.temperaturaDesejada = 23;
-//    	System.out.println("O Ar-condicionado de casa é: " + ArCondicionadoCasa.cor + ", tem potência: " + ArCondicionadoCasa.potenciaBTU + "W" + " e é da marca:" + ArCondicionadoCasa.marca);
-//    	System.out.println("O Ar-condicionado do trabalho é: " + ArCondicionadoTrabalho.cor + ". Ele está está ligado? " + ArCondicionadoTrabalho.ligado + ", e está na temperatura desejada de: " + ArCondicionadoTrabalho.temperaturaDesejada + "C");
-//
-//    }
-//}
 //import br.com.fiapride.model.Passageiro;
 //
 //public class SistemaPrincipal {
@@ -49,21 +28,38 @@ package br.com.fiapride.main;
 //
 //    }
 //}
-
-import br.com.fiapride.model.ArCondicionado;
-
-public class SistemaPrincipal {
-
-    public static void main(String[] args) {
-        ArCondicionado meuAr = new ArCondicionado();
-        meuAr.marca = "Samsung";
-        
-        // Usando o método com True/False
-        meuAr.ligarDesligar(true);  // Isso vai ligar o ar
-        meuAr.setTemperatura(22);
-        
-        meuAr.ligarDesligar(false); // Isso vai desligar o ar
-        
-        System.out.println("Estado final: Ligado = " + meuAr.ligado);
-    }
-}
+//
+//import br.com.fiapride.model.Passageiro;
+//
+//public class SistemaPrincipal {
+//
+//    public static void main(String[] args) {
+//        
+//        System.out.println("--- Iniciando o Sistema FiapRide --- \n");
+//        
+//        // INSTANCIAÇÃO (Usando o Construtor!)
+//        // Não precisamos mais de passageiro.nome = "Ana", já passamos tudo de uma vez.
+//        Passageiro passageiro1 = new Passageiro("Ana Silva", "222.222.222-22");
+//        System.out.println(">>> Recarga Passageiro 1:");
+//        passageiro1.adicionarSaldo(50.0);
+//
+//        Passageiro passageiro2 = new Passageiro("Carlos Souza", "333.333.333-33");
+//        System.out.println(">>> Recarga Passageiro 2:");
+//        passageiro2.adicionarSaldo(12.5);
+//
+//        System.out.println("\n--- Status dos Passageiros ---");
+//        // Lendo os dados com os Getters:
+//        System.out.println("Passageiro: " + passageiro1.getNome() + " | Saldo: R$ " + passageiro1.getSaldo() + " | CPF: " + passageiro1.getCpf());
+//        System.out.println("Passageiro: " + passageiro2.getNome() + " | Saldo: R$ " + passageiro2.getSaldo() + " | CPF: " + passageiro2.getCpf());
+//        
+//        System.out.println("\n--- Realizando Viagens ---");
+//        System.out.println("Pagando viagem do passageiro 1 (Ana)...");
+//        passageiro1.pagarViagem(20.0); // Ana tem 50, vai sobrar 30.
+//        
+//        System.out.println("\nPagando viagem do passageiro 2 (Carlos)...");
+//        passageiro2.pagarViagem(20.0); // Carlos tem 12.5. O sistema DEVE bloquear!
+//        
+//        // Tente hackear o sistema descomentando a linha abaixo:
+//        // passageiro1.saldo = 999999.0; // O Java vai exibir erro vermelho! A proteção funcionou!
+//    }
+//}
