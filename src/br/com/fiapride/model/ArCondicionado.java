@@ -1,14 +1,20 @@
 package br.com.fiapride.model;
 
 public class ArCondicionado {
-    // Atributos privados (a "barragem")
+    // Atributos privados
     private String marca;
     private String cor;
     private int potenciaBTU;
     private int temperaturaDesejada;
     private boolean ligado;
 
-    // --- MÉTODOS GETTERS E SETTERS ---
+    // CONSTRUTOR 
+    // Atributo essencial escolhido: marca
+    public ArCondicionado(String marca) {
+        this.setMarca(marca);
+    }
+
+    // GETTERS E SETTERS 
     
     public String getMarca() { return marca; }
     public void setMarca(String marca) { this.marca = marca; }
@@ -20,13 +26,10 @@ public class ArCondicionado {
     public void setPotencia(int potenciaBTU) { this.potenciaBTU = potenciaBTU; }
 
     public int getTemperatura() { return temperaturaDesejada; }
-    // O setTemperatura é privado ou controlado no seu diagrama para segurança
     public void setTemperatura(int temperaturaDesejada) { this.temperaturaDesejada = temperaturaDesejada; }
 
     public boolean getLigado() { return ligado; }
     public void setLigado(boolean ligado) { this.ligado = ligado; }
-
-    // --- OPERAÇÕES DE NEGÓCIO ---
 
     public void LigarDesligar(boolean status) {
         this.ligado = status;
@@ -51,4 +54,3 @@ public class ArCondicionado {
         }
     }
 }
-

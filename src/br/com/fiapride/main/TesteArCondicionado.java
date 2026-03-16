@@ -22,29 +22,45 @@ package br.com.fiapride.main;
 
 // add novo código com barragem p n mudar só visualizar (encapsular)
 
-import br.com.fiapride.model.ArCondicionado;
+//import br.com.fiapride.model.ArCondicionado;
+//
+//public class TesteArCondicionado {
+//
+//    public static void main(String[] args) {
+//        // 1. Instanciando o objeto
+//        ArCondicionado meuAr = new ArCondicionado();
+//        
+//        // 2. Configurando os dados através dos SETTERS (Encapsulamento)
+//        meuAr.setMarca("Samsung");
+//        meuAr.setTemperatura(20); 
+//        
+//        // 3. Testando as operações do seu Astah
+//        meuAr.LigarDesligar(true);
+//        meuAr.adicionarTemperatura(); // Vai para 21
+//        
+//        // 4. Exibindo os resultados usando GETTERS
+//        System.out.println("--- Status do Ar ---");
+//        System.out.println("Marca: " + meuAr.getMarca());
+//        System.out.println("Temp Atual: " + meuAr.getTemperatura() + "°C");
+//        
+//        meuAr.LigarDesligar(false);
+//        // teste de erro meuAr.marca"LG";
+//        
+//    }
+//}
+import br.com.fiapride.model.Veiculo;
+import br.com.fiapride.model.ArCondicionado; // Importante adicionar o import
 
 public class TesteArCondicionado {
-
     public static void main(String[] args) {
-        // 1. Instanciando o objeto
-        ArCondicionado meuAr = new ArCondicionado();
         
-        // 2. Configurando os dados através dos SETTERS (Encapsulamento)
-        meuAr.setMarca("Samsung");
-        meuAr.setTemperatura(20); 
+        // TESTE do Veiculo (já existente no seu código)
+        Veiculo meuCarro = new Veiculo("ABC-1234", "Toyota Corolla");
         
-        // 3. Testando as operações do seu Astah
-        meuAr.LigarDesligar(true);
-        meuAr.adicionarTemperatura(); // Vai para 21
+        // TESTE do ArCondicionado (Consertando o erro de compilação)
+        // Antes: ArCondicionado meuAr = new ArCondicionado(); -> Daria ERRO
+        ArCondicionado meuAr = new ArCondicionado("Samsung"); // Agora com o argumento correto!
         
-        // 4. Exibindo os resultados usando GETTERS
-        System.out.println("--- Status do Ar ---");
-        System.out.println("Marca: " + meuAr.getMarca());
-        System.out.println("Temp Atual: " + meuAr.getTemperatura() + "°C");
-        
-        meuAr.LigarDesligar(false);
-        // teste de erro meuAr.marca"LG";
-        
-    }
+        System.out.println("Ar-condicionado da marca: " + meuAr.getMarca() + " criado com sucesso!");
+   }
 }
