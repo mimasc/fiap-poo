@@ -48,19 +48,19 @@ package br.com.fiapride.main;
 //        
 //    }
 //}
-import br.com.fiapride.model.Veiculo;
-import br.com.fiapride.model.ArCondicionado;
+// import br.com.fiapride.model.Veiculo;
+// import br.com.fiapride.model.ArCondicionado;
 
-public class TesteArCondicionado {
-    public static void main(String[] args) {
+// public class TesteArCondicionado {
+//     public static void main(String[] args) {
         
-        // TESTE do Veiculo (já existe no código)
-        Veiculo meuCarro = new Veiculo("ABC-1234", "Toyota Corolla");
+//         // TESTE do Veiculo (já existe no código)
+//         Veiculo meuCarro = new Veiculo("ABC-1234", "Toyota Corolla");
         
-        // TESTE do ArCondicionado (Consertando o erro de compilação)
-        // Antes: ArCondicionado meuAr = new ArCondicionado(); -> Da ERRO
-        ArCondicionado meuAr = new ArCondicionado("Samsung"); // Agora com o argumento certo
+//         // TESTE do ArCondicionado (Consertando o erro de compilação)
+//         // Antes: ArCondicionado meuAr = new ArCondicionado(); -> Da ERRO
+//         ArCondicionado meuAr = new ArCondicionado("Samsung"); // Agora com o argumento certo
         
-        System.out.println("Ar-condicionado da marca: " + meuAr.getMarca() + " criado com sucesso!");
-   }
-}
+//         System.out.println("Ar-condicionado da marca: " + meuAr.getMarca() + " criado com sucesso!");
+//    }
+// }
