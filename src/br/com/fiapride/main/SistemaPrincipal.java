@@ -82,17 +82,16 @@ import br.com.fiapride.model.Filtro;
 public class SistemaPrincipal {
     public static void main(String[] args) {
         
-        // 1. Criamos o filtro
+        // 1. filtro
         Filtro meuFiltro = new Filtro("HEPA Antialérgico");
         
-        // 2. Criamos o Ar-condicionado passando o filtro
+        // 2. Ar-condicionado passando o filtro
         ArCondicionado meuAr = new ArCondicionado("Samsung", meuFiltro);
         
-        // 3. Testando
+        // 3. Teste
         meuAr.LigarDesligar();
         meuAr.adicionarTemperatura();
         
-        // CORREÇÃO DO ERRO: Use getNivelSujeira() em vez de getSujeira()
         System.out.println("Nível de sujeira: " + meuAr.getFiltro().getNivelSujeira());
     }
 }
