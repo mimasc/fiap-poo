@@ -73,7 +73,7 @@
 //        Veiculo meuCarro = new Veiculo("ABC-1234", "Toyota Corolla");
 //   }
 //}
-
+        //Relacionamentos:
 package br.com.fiapride.main;
 
 import br.com.fiapride.model.ArCondicionado;
