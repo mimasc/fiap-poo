@@ -73,25 +73,36 @@
 //        Veiculo meuCarro = new Veiculo("ABC-1234", "Toyota Corolla");
 //   }
 //}
-        //Relacionamentos:
-package br.com.fiapride.main;
+//         //Relacionamentos:
+// package br.com.fiapride.main;
 
-import br.com.fiapride.model.ArCondicionado;
-import br.com.fiapride.model.Filtro;
+// import br.com.fiapride.model.ArCondicionado;
+// import br.com.fiapride.model.Filtro;
 
-public class SistemaPrincipal {
-    public static void main(String[] args) {
+// public class SistemaPrincipal {
+//     public static void main(String[] args) {
         
-        // 1. filtro
-        Filtro meuFiltro = new Filtro("HEPA Antialérgico");
+//         // 1. filtro
+//         Filtro meuFiltro = new Filtro("HEPA Antialérgico");
         
-        // 2. Ar-condicionado passando o filtro
-        ArCondicionado meuAr = new ArCondicionado("Samsung", meuFiltro);
+//         // 2. Ar-condicionado passando o filtro
+//         ArCondicionado meuAr = new ArCondicionado("Samsung", meuFiltro);
         
-        // 3. Teste
-        meuAr.LigarDesligar();
-        meuAr.adicionarTemperatura();
+//         // 3. Teste
+//         meuAr.LigarDesligar();
+//         meuAr.adicionarTemperatura();
         
-        System.out.println("Nível de sujeira: " + meuAr.getFiltro().getNivelSujeira());
-    }
-}
+//         System.out.println("Nível de sujeira: " + meuAr.getFiltro().getNivelSujeira());
+//     }
+// }
+
+// Aula Herança 
+// Criando um filtro para o portátil
+Filtro filtroPortatil = new Filtro("Espuma");
+
+// Instanciando o herdeiro (Marca, Filtro, Capacidade do Reservatório)
+ArCondicionadoPortatil meuPortatil = new ArCondicionadoPortatil("LG", filtroPortatil, 5.0);
+
+meuPortatil.LigarDesligar();
+meuPortatil.adicionarTemperatura(); 
+meuPortatil.esvaziarReservatorio();  
