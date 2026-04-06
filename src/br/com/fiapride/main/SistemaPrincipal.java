@@ -1,4 +1,7 @@
-//package br.com.fiapride.main;
+package br.com.fiapride.main;
+import br.com.fiapride.model.ArCondicionado;
+import br.com.fiapride.model.ArCondicionadoPortatil;
+import br.com.fiapride.model.Filtro;
 //
 ////import br.com.fiapride.model.Passageiro;
 ////
@@ -96,13 +99,21 @@
 //     }
 // }
 
-// Aula Herança 
-// Criando um filtro para o portátil
-Filtro filtroPortatil = new Filtro("Espuma");
+public class SistemaPrincipal {
 
-// Instanciando o herdeiro (Marca, Filtro, Capacidade do Reservatório)
-ArCondicionadoPortatil meuPortatil = new ArCondicionadoPortatil("LG", filtroPortatil, 5.0);
+    public static void main(String[] args) {
 
-meuPortatil.LigarDesligar();
-meuPortatil.adicionarTemperatura(); 
-meuPortatil.esvaziarReservatorio();  
+        // --- Aula Herança ---
+        // 1. Criando um filtro para o portátil
+        Filtro filtroPortatil = new Filtro("Espuma");
+
+        // 2. Instanciando o herdeiro
+        ArCondicionadoPortatil meuPortatil = new ArCondicionadoPortatil("LG", filtroPortatil, 5.0);
+
+        meuPortatil.LigarDesligar();
+        meuPortatil.adicionarTemperatura();
+        meuPortatil.esvaziarReservatorio();
+
+    } 
+
+} 
