@@ -25,3 +25,11 @@ public class ArCondicionadoPortatil extends ArCondicionado {
     public double getVolumeAguaAtual() { return volumeAguaAtual; }
     public void setVolumeAguaAtual(double volume) { this.volumeAguaAtual = volume; }
 }
+
+// Polimorfismo
+@Override
+public void exibirStatus() {
+    super.exibirStatus(); // Chama o básico do pai
+    System.out.println("Tipo: Portátil");
+    System.out.println("Reservatório: " + volumeAguaAtual + "L / " + capacidadeReservatorio + "L");
+}
