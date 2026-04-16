@@ -55,6 +55,7 @@
 //    }
 //}
 
+// Add Filtro
 package br.com.fiapride.model;
 
 public class ArCondicionado {
@@ -86,4 +87,9 @@ public class ArCondicionado {
             filtro.setNivelSujeira(atual + 0.5);
         }
     }
+}
+// Polimorfismo
+public void exibirStatus() {
+    System.out.println("--- Status do Aparelho ---");
+    System.out.println("Marca: " + marca + " | Ligado: " + (ligado ? "Sim" : "Não"));
 }
