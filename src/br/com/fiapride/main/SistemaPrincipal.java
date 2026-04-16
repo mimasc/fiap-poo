@@ -1,7 +1,5 @@
 package br.com.fiapride.main;
-import br.com.fiapride.model.ArCondicionado;
-import br.com.fiapride.model.ArCondicionadoPortatil;
-import br.com.fiapride.model.Filtro;
+import br.com.fiapride.model.*;
 //
 ////import br.com.fiapride.model.Passageiro;
 ////
@@ -99,21 +97,49 @@ import br.com.fiapride.model.Filtro;
 //     }
 // }
 
+// public class SistemaPrincipal {
+
+//     public static void main(String[] args) {
+
+//         // --- Aula Herança ---
+//         // 1. Criando um filtro para o portátil
+//         Filtro filtroPortatil = new Filtro("Espuma");
+
+//         // 2. Instanciando o herdeiro
+//         ArCondicionadoPortatil meuPortatil = new ArCondicionadoPortatil("LG", filtroPortatil, 5.0);
+
+//         meuPortatil.LigarDesligar();
+//         meuPortatil.adicionarTemperatura();
+//         meuPortatil.esvaziarReservatorio();
+
+//     } 
+
+// } 
+
+// -------------- Polimorfismo ---------------
+import java.util.ArrayList;
+import java.util.List;
+
 public class SistemaPrincipal {
-
     public static void main(String[] args) {
+  
+        Filtro f = new Filtro("HEPA");
+        // 1.lista tipada com a Superclasse
+        List<ArCondicionado> listaAparelhos = new ArrayList<>();
 
-        // --- Aula Herança ---
-        // 1. Criando um filtro para o portátil
-        Filtro filtroPortatil = new Filtro("Espuma");
+        // Adicionando objetos 
+        listaAparelhos.add(new ArCondicionadoPortatil("LG", f, 5.0));
+        listaAparelhos.add(new ArCondicionadoInverter("Samsung", f, 60.0));
 
-        // 2. Instanciando o herdeiro
-        ArCondicionadoPortatil meuPortatil = new ArCondicionadoPortatil("LG", filtroPortatil, 5.0);
+        System.out.println("\n=== EXECUTANDO O TESTE ===");
 
-        meuPortatil.LigarDesligar();
-        meuPortatil.adicionarTemperatura();
-        meuPortatil.esvaziarReservatorio();
+        // O Teste: O laço for chamando o método sobrescrito
+        for (ArCondicionado ar : listaAparelhos) {
+            // Cada objeto responderá com sua "personalidade" específica
+            ar.exibirStatus(); 
+            System.out.println("------------------------------------");
+        }
+    }
+}
 
-    } 
 
-} 
