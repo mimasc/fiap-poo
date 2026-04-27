@@ -33,3 +33,7 @@ public void exibirStatus() {
     System.out.println("Tipo: Portátil");
     System.out.println("Reservatório: " + volumeAguaAtual + "L / " + capacidadeReservatorio + "L");
 }
+@Override
+public void modoEconomia() {
+    System.out.println("Modo Econômico Portátil: Reduzindo rotação do compressor e luzes do painel.");
+}
