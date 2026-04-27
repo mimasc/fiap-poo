@@ -56,40 +56,60 @@
 //}
 
 // Add Filtro
+// package br.com.fiapride.model;
+
+// public class ArCondicionado {
+//     private String marca;
+//     private String cor;
+//     private int potenciaBTU;
+//     private int temperaturaDesejada;
+//     private boolean ligado;
+//     private Filtro filtro; // Atributo para a associação
+
+//     public ArCondicionado(String marca, Filtro filtro) {
+//         this.marca = marca;
+//         this.filtro = filtro;
+//     }
+
+//     // Getter para o filtro 
+//     public Filtro getFiltro() { return filtro; }
+
+//     public void LigarDesligar() {
+//         this.ligado = !this.ligado;
+//         System.out.println(ligado ? "Ligado" : "Desligado");
+//     }
+
+//     public void adicionarTemperatura() {
+//         if (ligado) {
+//             this.temperaturaDesejada++;
+//             // Aumenta um pouco a sujeira do filtro associado
+//             double atual = filtro.getNivelSujeira();
+//             filtro.setNivelSujeira(atual + 0.5);
+//         }
+//     }
+// }
+// // Polimorfismo
+// public void exibirStatus() {
+//     System.out.println("--- Status do Aparelho ---");
+//     System.out.println("Marca: " + marca + " | Ligado: " + (ligado ? "Sim" : "Não"));
+// }
 package br.com.fiapride.model;
 
-public class ArCondicionado {
-    private String marca;
-    private String cor;
-    private int potenciaBTU;
-    private int temperaturaDesejada;
-    private boolean ligado;
-    private Filtro filtro; // Atributo para a associação
+//Transformar a classe em abstract
+public abstract class ArCondicionado {
+    protected String marca;
+    protected Filtro filtro;
 
     public ArCondicionado(String marca, Filtro filtro) {
         this.marca = marca;
         this.filtro = filtro;
     }
 
-    // Getter para o filtro 
-    public Filtro getFiltro() { return filtro; }
+    //Criar o método abstrato que todos devem implementar
+    // Cada tipo de ar tem um modo de economia diferente
+    public abstract void modoEconomia();
 
-    public void LigarDesligar() {
-        this.ligado = !this.ligado;
-        System.out.println(ligado ? "Ligado" : "Desligado");
+    public void ligar() {
+        System.out.println("Aparelho " + marca + " ligado.");
     }
-
-    public void adicionarTemperatura() {
-        if (ligado) {
-            this.temperaturaDesejada++;
-            // Aumenta um pouco a sujeira do filtro associado
-            double atual = filtro.getNivelSujeira();
-            filtro.setNivelSujeira(atual + 0.5);
-        }
-    }
-}
-// Polimorfismo
-public void exibirStatus() {
-    System.out.println("--- Status do Aparelho ---");
-    System.out.println("Marca: " + marca + " | Ligado: " + (ligado ? "Sim" : "Não"));
 }
