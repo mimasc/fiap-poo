@@ -117,29 +117,39 @@ import br.com.fiapride.model.*;
 // } 
 
 // -------------- Polimorfismo ---------------
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
+// public class SistemaPrincipal {
+//     public static void main(String[] args) {
+  
+//         Filtro f = new Filtro("HEPA");
+//         // 1.lista tipada com a Superclasse
+//         List<ArCondicionado> listaAparelhos = new ArrayList<>();
+
+//         // Adicionando objetos 
+//         listaAparelhos.add(new ArCondicionadoPortatil("LG", f, 5.0));
+//         listaAparelhos.add(new ArCondicionadoInverter("Samsung", f, 60.0));
+
+//         System.out.println("\n=== EXECUTANDO O TESTE ===");
+
+//         // O Teste: O laço for chamando o método sobrescrito
+//         for (ArCondicionado ar : listaAparelhos) {
+//             // Cada objeto responderá com sua "personalidade" específica
+//             ar.exibirStatus(); 
+//             System.out.println("------------------------------------");
+//         }
+//     }
+// }
 public class SistemaPrincipal {
     public static void main(String[] args) {
-  
         Filtro f = new Filtro("HEPA");
-        // 1.lista tipada com a Superclasse
-        List<ArCondicionado> listaAparelhos = new ArrayList<>();
+        // objetos das subclasses e provar que funciona
+        ArCondicionado portatil = new ArCondicionadoPortatil("LG", f, 5.0);
+        ArCondicionado inverter = new ArCondicionadoInverter("Samsung", f, 60.0);
 
-        // Adicionando objetos 
-        listaAparelhos.add(new ArCondicionadoPortatil("LG", f, 5.0));
-        listaAparelhos.add(new ArCondicionadoInverter("Samsung", f, 60.0));
-
-        System.out.println("\n=== EXECUTANDO O TESTE ===");
-
-        // O Teste: O laço for chamando o método sobrescrito
-        for (ArCondicionado ar : listaAparelhos) {
-            // Cada objeto responderá com sua "personalidade" específica
-            ar.exibirStatus(); 
-            System.out.println("------------------------------------");
-        }
+        portatil.modoEconomia();
+        inverter.modoEconomia();
     }
 }
-
 
