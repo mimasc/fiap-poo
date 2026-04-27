@@ -11,4 +11,8 @@ public class ArCondicionadoInverter extends ArCondicionado {
         super.exibirRelatorio();
         System.out.println("Tipo: Inverter - Status: Economizando 40% de energia.");
     }
+    @Override
+public void modoEconomia() {
+    System.out.println("Modo Econômico Inverter: Ajustando frequência Hertz para manter a temperatura com gasto mínimo.");
+}
 }
