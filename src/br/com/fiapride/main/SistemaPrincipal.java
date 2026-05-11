@@ -142,15 +142,25 @@ import br.com.fiapride.model.*;
 //     }
 // }
 // aula abstração 
+// public class SistemaPrincipal {
+//     public static void main(String[] args) {
+//         Filtro f = new Filtro("HEPA");
+//         // objetos das subclasses e provar que funciona
+//         ArCondicionado portatil = new ArCondicionadoPortatil("LG", f, 5.0);
+//         ArCondicionado inverter = new ArCondicionadoInverter("Samsung", f, 60.0);
+
+//         portatil.modoEconomia();
+//         inverter.modoEconomia();
+//     }
+// }
+// aula interface
 public class SistemaPrincipal {
     public static void main(String[] args) {
-        Filtro f = new Filtro("HEPA");
-        // objetos das subclasses e provar que funciona
-        ArCondicionado portatil = new ArCondicionadoPortatil("LG", f, 5.0);
-        ArCondicionado inverter = new ArCondicionadoInverter("Samsung", f, 60.0);
-
-        portatil.modoEconomia();
-        inverter.modoEconomia();
+        ArCondicionadoInverter meuAr = new ArCondicionadoInverter("Samsung", new Filtro("HEPA"));
+        
+        meuAr.ligar();            // Vem da classe mãe
+        meuAr.modoEconomia();     // Vem da obrigação da classe abstrata
+        meuAr.conectarWifi();     // Vem do contrato da interface
     }
 }
 
